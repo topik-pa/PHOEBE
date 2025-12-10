@@ -15,4 +15,6 @@ block append meta
     link(rel="alternate", hreflang=link.lang, href=link.url)
 
 block main
+  include ../components/shared/breadcrumbs/breadcrumbs.pug
+
   h1= __('contacts.title')

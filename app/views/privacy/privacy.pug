@@ -15,6 +15,8 @@ block append meta
     link(rel="alternate", hreflang=link.lang, href=link.url)
 
 block main
+  include ../components/shared/breadcrumbs/breadcrumbs.pug
+
   h1= __('privacy.title')
   section!= __('privacy.section0')
   section!= __('privacy.section1')
