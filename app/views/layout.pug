@@ -8,8 +8,8 @@
   let proj_email = 'info@phoebe.com'
   let proj_logo = 'https://phoebe.com/assets/images/logo.webp'
   let og_image = ''
-  let sc_project = 123456789
-  let sc_security = 'abcde123456'
+  let sc_project = process.env.SC_PROJECT || null
+  let sc_security = process.env.SC_SECURITY || null
 
 doctype html
 html(lang=locale || 'en')
@@ -27,8 +27,8 @@ html(lang=locale || 'en')
         script(src='/scripts/index.js', type='module', defer)
       link(rel="dns-prefetch" href="https://www.statcounter.com")
       link(rel="dns-prefetch" href="https://c.statcounter.com")
-      meta(name="og:type" content="website")
-      meta(name="og:site_name" content=proj_name)
+      meta(property="og:type" content="website")
+      meta(property="og:site_name" content=proj_name)
   body(id=id)
     include ./components/shared/header/header.pug
     main(class=className)

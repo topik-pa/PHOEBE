@@ -9,8 +9,8 @@ const logger = nodeEnv === 'development'
       target: 'pino-pretty',
       options: {
         colorize: true,
-        translateTime: 'SYS:standard', // timestamp leggibile
-        ignore: 'pid,hostname'         // rimuove info inutili in dev
+        translateTime: 'SYS:standard', // readable timestamp
+        ignore: 'pid,hostname'         // removes unnecessary info in development
       }
     }
   })

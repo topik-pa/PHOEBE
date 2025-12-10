@@ -24,7 +24,9 @@
   border-color: var(--light-gray);
 }
 
-.btn.disabled {
+.btn[disabled], .btn.disabled {
   pointer-events: none;
   cursor: default;
+  opacity: 0.6;
+  background: var(--light-gray);
 }

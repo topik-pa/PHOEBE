@@ -5,7 +5,9 @@ export default  {
     })
     try {
       document.adoptedStyleSheets = [cssModule.default]
-    // eslint-disable-next-line no-unused-vars, no-empty
-    } catch (err) {}
+    // Setting adoptedStyleSheets may fail in unsupported browsers; log the error for debugging.
+    } catch (err) { 
+      // console.error('Error adopting style sheets:', err)
+    }
   }
 }

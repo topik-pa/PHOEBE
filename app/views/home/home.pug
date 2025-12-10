@@ -1,10 +1,10 @@
 extends ../layout.pug
 
 block append meta
-  meta(name="og:title" content=__('proj_tagline') + ' | ' + __('proj_name') )
-  meta(name="og:description" content=__('proj_description'))
-  meta(name="og:image" content=og_image)
-  meta(name="og:url" content=canonicalUrl)
+  meta(property="og:title" content=__('proj_tagline') + ' | ' + __('proj_name') )
+  meta(property="og:description" content=__('proj_description'))
+  meta(property="og:image" content=og_image)
+  meta(property="og:url" content=canonicalUrl)
 
   title= __('proj_tagline') + ' | ' + __('proj_name')
   meta(name="description" content=__('proj_description'))

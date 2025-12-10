@@ -16,12 +16,19 @@ const rules = {
   'space-before-function-paren': ['error', 'never'],
   'object-curly-spacing': ['error', 'always'],
   'arrow-spacing': ['error', { before: true, after: true }],
-  'no-console': 'warn'
+  'no-console': 'warn',
+  'max-len': ['error', { 'code': 120 } ]
 }
 
 
 export default defineConfig([
   { files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'], rules: rules },
   { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
-  { files: ['app/scripts/**/*.{js,mjs,cjs}', 'app/views/**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.browser } }
+  {
+    files: [
+      'app/scripts/**/*.{js,mjs,cjs}',
+      'app/views/**/*.{js,mjs,cjs}'
+    ],
+    languageOptions: { globals: globals.browser }
+  }
 ])

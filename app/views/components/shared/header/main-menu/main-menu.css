@@ -6,7 +6,6 @@
   display: inline-block;
   margin-left: 1px;
   background-color: var(--darkest-gray);
-  /* background: linear-gradient(360deg, var(--darkest-gray) 66%, rgba(85, 85, 85, 1) 90%, rgba(136, 136, 136, 1) 100%); */
   border-top-left-radius: var(--border-radius-small);
   border-top-right-radius: var(--border-radius-small);
 }
@@ -42,10 +41,6 @@
   #main-menu li a {
     padding: var(--x-small-space) calc(var(--x-small-space) * 3);
   }
-}
-
-@media screen and (max-width: 1024px) {
-
 }
 
 @media screen and (max-width: 768px) {

@@ -17,8 +17,8 @@ const modules = {
 if (modules[pageId]) {
   modules[pageId]().then((module) => {
     module.default?.init?.()
-  }).catch((_err) => {
-    // silently handle error
+  }).catch((err) => {
+    console.error('Failed to load module:', pageId, err)
   })
 }
 

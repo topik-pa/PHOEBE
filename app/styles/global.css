@@ -7,7 +7,7 @@ html {
 
 body {
   font-family: "Saira", sans-serif;
-  text-shadow:0 0 1px transparent;
+  text-shadow: 0 0 1px transparent;
   text-rendering: optimizeLegibility;
   letter-spacing: .03rem;
   color: var(--secondary);
@@ -48,10 +48,10 @@ small {
 }
 
 .hide {
-  display: none!important;
+  display: none !important;
 }
 .show {
-  display: block!important;
+  display: block !important;
 }
 
 .center {
@@ -64,12 +64,4 @@ main {
 
 section {
   margin-bottom: var(--xx-large-space);
-}
-
-@media screen and (max-width: 768px) {
-  
-}
-
-@media screen and (max-width: 430px) {
-
 }

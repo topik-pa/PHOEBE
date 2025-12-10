@@ -5,12 +5,8 @@
 header {
   padding: var(--x-small-space) var(--main-padding) var(--main-padding);
   padding-bottom: 0;
-  /* border-bottom: 1px solid var(--light-gray); */
   background: var(--secondary);
   font-weight: 500;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
 }
 
 header > div:nth-child(1)  {
@@ -34,8 +30,3 @@ header a {
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  header {
-
-  }
-}

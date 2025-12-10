@@ -7,6 +7,6 @@ const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
   logger.info(`🚀 Server is running on port ${PORT} in ${process.env.NODE_ENV} mode.`)
 }).on('error', (err) => {
-  logger.error(err, '❌ Server failed to start')
+  logger.error('❌ Server failed to start ', err)
   process.exit(1)
 })

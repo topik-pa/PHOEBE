@@ -5,9 +5,22 @@
 	<url>
 		<loc>https://phoebe.com</loc>
 		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
-		<changefreq>hourly</changefreq>
+		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
-	
 
+  <url>
+		<loc>https://phoebe.com/contacts</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+
+  <url>
+		<loc>https://phoebe.com/privacy</loc>
+		<lastmod>2025-01-01T12:00:00+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	
 </urlset>

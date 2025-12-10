@@ -26,7 +26,7 @@
     "start": "NODE_ENV=production node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint . --ignore-pattern './app/dist/*'"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
