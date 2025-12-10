@@ -4,7 +4,11 @@ const app = express()
 
 // Generate a nonce for Content Security Policy
 import crypto from 'crypto'
-const nonce = crypto.randomUUID()
+// Generate a nonce per request for CSP
+app.use((req, res, next) => {
+  res.locals.nonce = crypto.randomUUID()
+  next()
+})
 
 // Parse application/json
 app.use(express.json())
@@ -21,6 +25,7 @@ app.use('/styles', express.static(path.join(__dirname, 'app', 'styles')))
 app.use('/assets', express.static(path.join(__dirname, 'app', 'assets')))
 app.use('/scripts', express.static(path.join(__dirname, 'app', 'scripts')))
 app.use('/views', express.static(path.join(__dirname, 'app', 'views')))
+app.use('/dist', express.static(path.join(__dirname, 'app', 'dist')))
 
 
 // Internationalization setup
@@ -36,8 +41,7 @@ const i18n = new I18n({
   objectNotation: true
 })
 app.use((req, res, next) => {
-  i18n.init(req, res)
-  next()
+  i18n.init(req, res, next)
 })
 
 //Routes
@@ -53,4 +57,4 @@ app.use((err, _req, res, _next) => {
   res.status(500).render('5xx/500')
 })
 
-export { app, i18n, nonce }
+export { app, i18n }

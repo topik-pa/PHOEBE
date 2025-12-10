@@ -1,4 +1,4 @@
-import { i18n, nonce } from '../../server.js'
+import { i18n } from '../../server.js'
 
 
 export function viewController(req, res, viewId, breadcrumbs=[]) {
@@ -18,9 +18,7 @@ export function viewController(req, res, viewId, breadcrumbs=[]) {
       canonicalUrl,
       hreflangs,
       lang,
-      breadcrumbs,
-      // nonce is used for CSP (Content Security Policy) to allow inline scripts securely
-      nonce
+      breadcrumbs
     }
   }
   
