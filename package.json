@@ -11,9 +11,14 @@
   ],
   "license": "ISC",
   "author": "Marco Pavan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topik-pa/PHOEBE.git"
+  },
   "type": "module",
   "engines": {
-    "node": "24.x"
+    "node": "24.x",
+    "npm": "11.6.2"
   },
   "main": "index.js",
   "scripts": {
@@ -23,8 +28,10 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "pino": "^10.1.0"
+    "express": "4.21.2",
+    "i18n": "^0.15.3",
+    "pino": "^10.1.0",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
