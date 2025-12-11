@@ -10,7 +10,8 @@ cookieLayer.init()
 
 // Import views specific scripts
 const modules = {
-  home: () => import('../views/home/home.js')
+  home: () => import('../views/home/home.js'),
+  users: () => import('../views/users/users.js')
 }
 
 // Execute view specific script

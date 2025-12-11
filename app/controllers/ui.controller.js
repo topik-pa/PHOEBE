@@ -1,7 +1,7 @@
 import { i18n } from '../../server.js'
 
 
-export function viewController(req, res, viewId, breadcrumbs=[]) {
+export function viewController(req, res, viewId, breadcrumbs=[], data=[]) {
   const supportedLangs = ['en', 'it']
   const fallback = 'en'
   const lang = req.params.lang || fallback
@@ -20,7 +20,8 @@ export function viewController(req, res, viewId, breadcrumbs=[]) {
       canonicalUrl,
       hreflangs,
       lang,
-      breadcrumbs
+      breadcrumbs,
+      data
     }
   }
   

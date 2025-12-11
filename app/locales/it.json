@@ -5,11 +5,8 @@
   "proj_tagline": "phoebe.com tagline",
   "views": {
     "home": "Home",
+    "users": "Utenti",
     "privacy": "Privacy",
-    "contacts": "Contatti"
-  },
-  "header": {
-    "home": "Home",
     "contacts": "Contatti"
   },
   "breadcrumbs": {

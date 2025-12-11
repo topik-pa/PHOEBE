@@ -115,4 +115,10 @@ app.use((err, _req, res, _next) => {
   res.status(500).render('5xx/500')
 })
 
+// Database connection
+import { connectToDB } from './app/db/mongoose.js'
+if (process.env.NODE_ENV !== 'test') {
+  await connectToDB()
+}
+
 export { app, i18n }

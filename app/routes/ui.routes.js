@@ -2,6 +2,7 @@
 
 import express from 'express'
 import path from 'path'
+import { getAllUsers } from '../controllers/db.controller.js'
 import { viewController } from '../controllers/ui.controller.js'
 import { fileURLToPath } from 'url'
 
@@ -20,6 +21,16 @@ router.get('/robots.txt', (req, res) => {
 // favicon.ico
 router.get('/favicon.ico', (req, res) => {
   res.sendFile('/public/favicon.ico', { root: './app' })
+})
+
+// Users
+router.get(`/:lang(${LANG_REGEX})/users`, async(req, res) => {
+  try {
+    const users = await getAllUsers()
+    viewController(req, res, 'users', [{ name: 'users' }], users)
+  } catch (error) {
+    console.error('Error fetching users:', error)
+  }
 })
 
 // Privacy
