@@ -3,8 +3,12 @@
 import express from 'express'
 import path from 'path'
 import { viewController } from '../controllers/ui.controller.js'
+import { fileURLToPath } from 'url'
+
 const router = express.Router()
 const LANG_REGEX = 'it|en'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 router.get('/sitemap.xml', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/sitemap.xml'))

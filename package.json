@@ -18,7 +18,7 @@
   "type": "module",
   "engines": {
     "node": "24.x",
-    "npm": "11.6.2"
+    "npm": "11.x"
   },
   "main": "index.js",
   "scripts": {
