@@ -1,5 +1,20 @@
-import { i18n } from '../../server.js'
+/**
+ * Renders a view with localization support and SEO metadata
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ * @param {string} viewId - The identifier of the view to render
+ * @param {Array} [breadcrumbs=[]] - Array of breadcrumb objects for navigation
+ * @param {Array} [data=[]] - Additional data to pass to the view
+ * @returns {void}
+ * @description
+ * This controller handles view rendering with the following features:
+ * - Language validation and fallback to English
+ * - Automatic redirect for unsupported languages
+ * - Generation of canonical URLs and hreflang tags for SEO
+ * - Sets i18n locale based on the language parameter
+ */
 
+import { i18n } from '../../server.js'
 
 export function viewController(req, res, viewId, breadcrumbs=[], data=[]) {
   const supportedLangs = ['en', 'it']

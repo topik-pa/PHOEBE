@@ -1,3 +1,24 @@
+/**
+ * Logger configuration module using Pino.
+ * 
+ * Creates a logger instance with different configurations based on the environment:
+ * - Development: Uses pino-pretty transport with colorized output and human-readable timestamps
+ * - Production: Uses standard pino output with configurable log level
+ * 
+ * @module logger
+ * @requires pino
+ * 
+ * @type {import('pino').Logger}
+ * 
+ * @example
+ * import logger from './configs/logger.js'
+ * 
+ * logger.info('App started')
+ * logger.warn('Warning message')
+ * logger.error(new Error('Something went wrong'))
+ * logger.debug({ object: 'debug info' }, 'Debug details')
+ */
+
 import pino from 'pino'
 
 const nodeEnv = process.env.NODE_ENV || 'development'
@@ -17,10 +38,5 @@ const logger = nodeEnv === 'development'
   : pino({
     level: process.env.LOG_LEVEL || 'info'
   })
-
-// logger.info('App avviata')
-// logger.warn('Attenzione!')
-// logger.error(new Error('Qualcosa è andato storto'))
-// logger.debug({ oggetto: 'debug info' }, 'Dettagli debug')
 
 export default logger

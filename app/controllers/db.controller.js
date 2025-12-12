@@ -1,3 +1,48 @@
+/**
+ * Retrieves all users from the database.
+ * @async
+ * @function getAllUsers
+ * @returns {Promise<Array>} A promise that resolves to an array of user documents
+ * @throws {Error} Throws an error if the database query fails
+ */
+
+/**
+ * Creates a new user in the database.
+ * @async
+ * @function createUser
+ * @param {Object} data - The user data to be saved
+ * @returns {Promise<Object>} A promise that resolves to the saved user document
+ * @throws {Error} Throws an error if the user creation fails
+ */
+
+/**
+ * Reads a single user from the database by userId.
+ * @async
+ * @function readUser
+ * @param {string} userId - The unique identifier of the user to retrieve
+ * @returns {Promise<Object|null>} A promise that resolves to the user document or null if not found
+ * @throws {Error} Throws an error if the database query fails
+ */
+
+/**
+ * Updates an existing user or creates a new one if it doesn't exist.
+ * @async
+ * @function upsertUser
+ * @param {Object} data - The user data to update or insert
+ * @param {string} data.userId - The unique identifier of the user
+ * @returns {Promise<Object>} A promise that resolves to the updated or created user document
+ * @throws {Error} Throws an error if the upsert operation fails
+ */
+
+/**
+ * Deletes a user from the database by userId.
+ * @async
+ * @function deleteUser
+ * @param {string} userId - The unique identifier of the user to delete
+ * @returns {Promise<Object>} A promise that resolves to the deletion result object
+ * @throws {Error} Throws an error if the deletion operation fails
+ */
+
 import { User } from '../models/User.js'
 import logger from '../configs/logger.js'
 

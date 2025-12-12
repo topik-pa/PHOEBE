@@ -1,4 +1,28 @@
 :root {
+  /**
+   * CSS Variables Definition File
+   * 
+   * This file contains all CSS custom properties (variables) used throughout the application.
+   * It serves as a central location for managing design tokens and maintaining consistency
+   * across the entire project.
+   * 
+   * @file variables.css
+   * @description Global CSS variables for colors, spacing, typography, and other design tokens
+   * @project PHOEBE
+   * @path /home/marco/Progetti/PHOEBE/app/styles/variables.css
+   * 
+   * Usage:
+   * - Import this file at the root of your main stylesheet
+   * - Reference variables using var(--variable-name)
+   * - Organize variables by category (colors, spacing, typography, etc.)
+   * 
+   * Example:
+   * .element {
+   *   color: var(--primary-color);
+   *   padding: var(--spacing-md);
+   * }
+   */
+   
   /* COLORS */
   --white:         #FAF9F6;
   --lightest-gray: #EAE9E6;

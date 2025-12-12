@@ -1,3 +1,36 @@
+/**
+ * Express application server setup with security middleware and configuration.
+ * 
+ * This module configures an Express.js application with the following features:
+ * - Content Security Policy (CSP) with per-request nonce generation
+ * - JSON body parsing
+ * - Response compression with custom filter
+ * - Security headers (HSTS, CSP, X-Content-Type-Options)
+ * - HTTPS enforcement in production
+ * - WWW to non-WWW redirect
+ * - Trailing slash removal
+ * - Pug view engine setup
+ * - Static file serving for assets, styles, scripts, and views
+ * - Internationalization (i18n) support for English and Italian
+ * - API and UI route handling
+ * - Custom 404 and 500 error handling
+ * - MongoDB database connection (skipped in test environment)
+ * 
+ * @module server
+ * @requires express
+ * @requires crypto
+ * @requires compression
+ * @requires path
+ * @requires url
+ * @requires i18n
+ * @requires ./app/routes/api.routes.js
+ * @requires ./app/routes/ui.routes.js
+ * @requires ./app/db/mongoose.js
+ * 
+ * @exports {express.Application} app - Configured Express application instance
+ * @exports {I18n} i18n - Internationalization instance configured for 'en' and 'it' locales
+ */
+
 // Express app setup
 import express from 'express'
 const app = express()

@@ -1,3 +1,27 @@
+/**
+ * Express router for UI routes.
+ * Handles static files (sitemap, robots.txt, favicon) and page rendering.
+ * Supports internationalization with language prefixes (it|en).
+ * 
+ * @module routes/ui.routes
+ * @requires express
+ * @requires path
+ * @requires ../controllers/db.controller
+ * @requires ../controllers/ui.controller
+ * @requires url
+ * 
+ * Routes:
+ * - GET /sitemap.xml - Serves the sitemap file
+ * - GET /robots.txt - Serves the robots.txt file
+ * - GET /favicon.ico - Serves the favicon file
+ * - GET /:lang/users - Displays users page with data from database
+ * - GET /:lang/privacy - Displays privacy page
+ * - GET /:lang/contacts - Displays contacts page
+ * - GET /:lang - Displays home page
+ * - GET / - Redirects to home page with browser's preferred language
+ * 
+ * @constant {string} LANG_REGEX - Regex pattern for supported languages (it|en)
+ */
 // This code works with Express version 4.x
 
 import express from 'express'

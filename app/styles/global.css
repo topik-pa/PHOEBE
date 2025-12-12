@@ -1,3 +1,16 @@
+/**
+ * Root and body element styles
+ * 
+ * This ruleset defines the base styles for the html and body elements,
+ * establishing the foundation for the entire document's styling.
+ * These elements are typically used to set global defaults such as:
+ * - Font family and size
+ * - Background colors
+ * - Margins and padding reset
+ * - Box-sizing model
+ * - Viewport height settings
+ */
+ 
 html, body {
   height: 100%;
 }
