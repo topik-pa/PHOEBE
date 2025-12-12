@@ -99,6 +99,8 @@ app.use((req, res, next) => {
 })
 
 //Routes
+import apiRoutes from './app/routes/api.routes.js'
+app.use('/api', apiRoutes)
 import uiRoutes from './app/routes/ui.routes.js'
 app.use('/', uiRoutes)
 // 404 handling
