@@ -10,28 +10,39 @@
  * - Box-sizing model
  * - Viewport height settings
  */
- 
-html, body {
+
+html,
+body {
   height: 100%;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Saira", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-shadow: 0 0 1px transparent;
   text-rendering: optimizeLegibility;
   letter-spacing: .03rem;
   color: var(--secondary);
   background-color: var(--primary);
   font-size: var(--font-size-small);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 a {
   color: var(--link);
   position: relative;
 }
+
 a.ext::after {
   content: '\21F1';
   transform: rotate(90deg);
@@ -42,7 +53,8 @@ a.ext::after {
   right: 0;
 }
 
-em, .em {
+em,
+.em {
   font-weight: 500;
   font-style: italic;
 }
@@ -63,6 +75,7 @@ small {
 .hide {
   display: none !important;
 }
+
 .show {
   display: block !important;
 }
